@@ -24,7 +24,7 @@ class SecurityController extends AbstractController
 
         // * 3. Create form
         $form = $this->get('form.factory')
-            ->createNameBuilder(null)
+            ->createNamedBuilder(null)
             ->add('_username', null, ['label' => 'Email'])
             ->add('_password', PasswordType::class, ['label' => 'Mot de passe'])
             ->add('ok', SubmitType::class, ['label' => 'Ok', 'attr' => ['class' => 'btn-primary btn-block']])
