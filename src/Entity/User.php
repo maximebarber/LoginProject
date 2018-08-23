@@ -33,6 +33,11 @@ class User implements UserInterface, \Serializable
 
     /**
      * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 8,
+     *      max = 50,
+     *      minMessage = "Votre mot de passe doit faire au moins {{ limit }} caractères.se",
+     *      maxMessage = "Your first name cannot be longer than {{ limit }} characters")
      * @Assert\Length(max=250)
      */
     private $plainPassword;

@@ -31,7 +31,7 @@ class RegistrationController extends AbstractController
             $user->setPassword($password);
             //By default isActive is on
             $user->setIsActive(true);
-            //$user->addRole("ROLE_ADMIN");
+            $user->addRole("ROLE_USER");
 
             // * 4. Save the user
             $entityManager = $this->getDoctrine()->getManager();
