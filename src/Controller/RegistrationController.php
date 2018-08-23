@@ -44,6 +44,8 @@ class RegistrationController extends AbstractController
 
         return $this->render('registration/register.html.twig', [
             'form' => $form->createView(),
+            'mainNavRegistration' => true,
+            'title' => 'Inscription'
         ]);
     }
 }
