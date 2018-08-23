@@ -39,8 +39,11 @@ class RegistrationController extends AbstractController
             $entityManager->flush();
 
             //Other possible actions (send email, set a flash success message...)
+            // * 5. Generate info message
             $this->addFlash('success', 'Votre compte a bien été enregistré.');
-            //return $this->redirectToRoute('login');
+            
+            // * 6. Redirect to the "login" route
+            return $this->redirectToRoute('login');
         }
 
         return $this->render('registration/register.html.twig', [

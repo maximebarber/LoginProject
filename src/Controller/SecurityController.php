@@ -29,7 +29,7 @@ class SecurityController extends AbstractController
             ->add('_password', PasswordType::class, ['label' => 'Mot de passe'])
             ->add('ok', SubmitType::class, ['label' => 'Ok', 'attr' => ['class' => 'btn-primary btn-block']])
             ->getForm();
-
+            
         return $this->render('security/login.html.twig', [
             'mainLogin' => true, 'title' => 'Connexion',
             //
